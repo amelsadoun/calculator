@@ -121,18 +121,20 @@ function isValid(string, tab) {
 }
 
 function performOperation() {
+recentOperation.textContent=operationString;
   convertedString = convertIntoNumbers(operationString);
   if (isValid(operationString, convertedString)) {
     currentOperation.textContent = doTheMath(convertedString)[0];
   } else {
-    currentOperation.textContent = "wrong";
+    currentOperation.textContent = "invalid operation";
   }
   operationString = "";
   document.activeElement.blur();
-
 }
 
+
 zeroButton.addEventListener("click", function () {
+
   operationString = operationString + "0";
   currentOperation.textContent = operationString;
 });
