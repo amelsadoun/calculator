@@ -1,0 +1,35 @@
+*{
+    border:1px solid red;
+}
+
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin:0;
+    border: 1px solid green;
+}
+
+.calculatorContainor{
+    display: flex;
+    flex-direction: column;
+    margin: 3% 10%;
+    padding:0.5%;
+    border:1px solid blue;
+}
+
+.displayScreen{
+    flex:20%;
+}
+.buttons{
+    flex:80%;
+    display: grid;
+    grid-template-areas:
+    'back divide multi minus'
+    'seven eight nine add'
+    'four five six add'
+    'one two three enter' 
+    'zero zero point enter';
+
+}
+
