@@ -78,20 +78,29 @@ function doTheMath(tab) {
   return tab;
 }
 
-function isValid(tab) {
+function isValid(string, tab) {
   //gotta check if they gave us a valid string and not some random shit lmfao
-  var booleen = true,
-    i = 0;
-  while (booleen && i < tab.length) {
-    if (isNaN(tab[i]) && !isOperator(tab[i])) {
+  var booleen = true;
+   var  i = 0;
+  while (booleen && i < string.length) {
+    if (isNaN(string[i]) && !isOperator(string[i])) {
       booleen = false;
     }
     i++;
   }
+    var j=0;
+    while (booleen && j < tab.length-1) {
+    if ((!isNaN(tab[j]) && !isOperator(tab[j+1])) || (isOperator(tab[j]) && isNaN(tab[j+1]))) {
+      booleen = false;
+    }
+    j++;
+  }
   return booleen;
 }
-if (isValid(operationString)) {
+
   convertedString = convertIntoNumbers(operationString);
+console.log('os : ',operationString);
+if (isValid(operationString, convertedString)) {
   console.log(doTheMath(convertedString)[0]);
 } else {
   console.log("wrong");

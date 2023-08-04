@@ -1,35 +1,43 @@
-*{
-    border:1px solid red;
+* {
+  border: 1px solid red;
 }
 
-body{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin:0;
-    border: 1px solid green;
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0;
+  border: 1px solid green;
 }
 
-.calculatorContainor{
-    display: flex;
-    flex-direction: column;
-    margin: 3% 10%;
-    padding:0.5%;
-    border:1px solid blue;
+.calculatorContainor {
+  flex:1;
+  display: flex;
+  flex-direction: column;
+  padding: 0.5%;
+  border: 1px solid blue;
+  margin: 5% 35vw;
+  height:35vw;
 }
 
-.displayScreen{
-    flex:20%;
-}
-.buttons{
-    flex:80%;
-    display: grid;
-    grid-template-areas:
-    'back divide multi minus'
-    'seven eight nine add'
-    'four five six add'
-    'one two three enter' 
-    'zero zero point enter';
-
+.displayScreen {
+  flex: 20%;
 }
 
+.buttons {
+  flex: 80%;
+  display: grid;
+  grid-template-areas:
+    "back divide multi minus"
+    "seven eight nine add"
+    "four five six add"
+    "one two three enter"
+    "zero zero point enter";
+  gap: 2%;
+  padding:2%;
+}
+
+.number {
+  background: aliceblue;
+
+}
