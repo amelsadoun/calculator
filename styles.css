@@ -1,5 +1,7 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&display=swap");
+
 * {
-  border: 1px solid red;
+  font-family: "Montserrat", sans-serif;
 }
 
 body {
@@ -7,21 +9,29 @@ body {
   justify-content: center;
   align-items: center;
   margin: 0;
-  border: 1px solid green;
 }
 
 .calculatorContainor {
-  flex:1;
+  flex: 1;
   display: flex;
   flex-direction: column;
   padding: 0.5%;
-  border: 1px solid blue;
+  border: 0.2vw solid rgb(214, 55, 250);
   margin: 5% 35vw;
-  height:35vw;
+  height: 35vw;
+  border-radius: 2vw;
+  background: #faefff;
 }
 
 .displayScreen {
   flex: 20%;
+  display: flex;
+  flex-direction: column;
+  border-radius: 1vw;
+  border: 0.2vw solid #bd84e2;
+  padding:2%;
+  gap:2%;
+  margin:2.5%
 }
 
 .buttons {
@@ -34,10 +44,48 @@ body {
     "one two three enter"
     "zero zero point enter";
   gap: 2%;
-  padding:2%;
+  padding: 2%;
 }
 
-.number {
-  background: aliceblue;
+.btn{
+  font-weight: bold;
+  font-size: 2.5vw;
+  border-radius: 1.5vw;
+  border: 0.2vw solid transparent;
+  background:#edd1ff ;
+  border: 0.2vw solid #bd84e2;
+  transition: 0.3s;
+}
 
+
+.number {
+  background: rgb(205, 124, 255);
+}
+
+
+.btn:hover{
+background:  rgb(205, 124, 255);
+}
+
+.number:hover{
+  background: #edd1ff;
+}
+
+.currentOperation{
+  justify-self: flex-end;
+  flex:60%;
+  font-size: 3vw;
+  font-weight: bold;
+  text-align: end;
+  text-justify: center;
+}
+
+.recentOperation{
+  justify-self: flex-start;
+  flex:40%;
+  opacity: 80%;
+font-size: 1.7vw;
+font-weight: light;
+text-align: end;
+text-justify: center;
 }
