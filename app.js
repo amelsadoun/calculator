@@ -19,6 +19,7 @@ const eightButton = document.querySelector(".btn.number.eight");
 const nineButton = document.querySelector(".btn.number.nine");
 const pointButton = document.querySelector(".btn.point");
 const enterButton = document.querySelector(".btn.enter");
+const clearButton = document.querySelector(".btn.clear");
 var operationString = "";
 
 const priority = {
@@ -132,6 +133,10 @@ recentOperation.textContent=operationString;
   document.activeElement.blur();
 }
 
+function backward (){
+  operationString = operationString.slice(0, operationString.length - 1);
+  currentOperation.textContent = operationString;
+}
 
 zeroButton.addEventListener("click", function () {
 
@@ -210,12 +215,17 @@ pointButton.addEventListener("click", function () {
 });
 
 backButton.addEventListener("click", function () {
-  operationString = operationString.slice(0, operationString.length - 1);
-  currentOperation.textContent = operationString;
+  backward();
 });
 
 enterButton.addEventListener("click", function () {
   performOperation();
+});
+
+clearButton.addEventListener("click", function () {
+operationString='';
+currentOperation.textContent = operationString;
+recentOperation.textContent = operationString;
 });
 
 document.addEventListener("keydown", function (event) {
@@ -226,5 +236,8 @@ document.addEventListener("keydown", function (event) {
   }
   if (key === "Enter") {
     performOperation();
+  }
+  if (key === "Backspace") {
+    backward();
   }
 });

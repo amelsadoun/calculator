@@ -9,6 +9,7 @@ body {
   justify-content: center;
   align-items: center;
   margin: 0;
+  background: #2e1142;
 }
 
 .calculatorContainor {
@@ -20,7 +21,7 @@ body {
   margin: 5% 35vw;
   height: 35vw;
   border-radius: 2vw;
-  background: #faefff;
+  background: linear-gradient(to bottom left, #efd6fa, #faefff);
 }
 
 .displayScreen {
@@ -28,10 +29,11 @@ body {
   display: flex;
   flex-direction: column;
   border-radius: 1vw;
-  border: 0.2vw solid #bd84e2;
+  border: 0.2vw solid #c7b8d2;
   padding:2%;
   gap:2%;
-  margin:2.5%
+  margin:2.5%;
+  background:linear-gradient(to bottom, #fdf9ff, #d8d2da );
 }
 
 .buttons {
@@ -40,7 +42,7 @@ body {
   grid-template-areas:
     "back divide multi minus"
     "seven eight nine add"
-    "four five six add"
+    "four five six clear"
     "one two three enter"
     "zero zero point enter";
   gap: 2%;
@@ -88,4 +90,13 @@ font-size: 1.7vw;
 font-weight: light;
 text-align: end;
 text-justify: center;
+}
+
+.clear{
+  font-size: 2vw;
+  padding:0%
+}
+
+.back{
+  padding:0;
 }
